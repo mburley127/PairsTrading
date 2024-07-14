@@ -37,26 +37,21 @@ def check_cointegration(series1, series2):
 
 
 # Function to Generate Trading Signals
-def generate_signals(data, commodities):
-    series1 = data[commodities[0]]
-    series2 = data[commodities[1]]
-    
-    spread, z_score = spread_and_zscore(series1, series2)  # Compute spread and Z-score
-    
+def generate_signals(spread, z_score, series1, series2):
     # Generate trading signals based on Z-score thresholds
     longs = z_score < -1  # Long signal when Z-score is less than -1
     shorts = z_score > 1  # Short signal when Z-score is greater than 1
     exits = abs(z_score) < 0.5  # Exit signal when Z-score is between -0.5 and 0.5
     
-    signals = pd.DataFrame(index=data.index)
+    signals = pd.DataFrame(index=spread.index)
     signals['longs'] = longs
     signals['shorts'] = shorts
     signals['exits'] = exits
     
-    return signals, spread, z_score
+    return signals
 
 
-### Function to Calculate the position
+### Function to Calculate the Position
 def backtest(signals, data, commodities):
     # Initialize positions df
     positions = pd.DataFrame(index = signals.index)
