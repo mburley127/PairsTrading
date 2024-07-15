@@ -43,7 +43,7 @@ def generate_signals(spread, z_score, series1, series2):
     shorts = z_score > 1  # Short signal when Z-score is greater than 1
     exits = abs(z_score) < 0.5  # Exit signal when Z-score is between -0.5 and 0.5
     
-    signals = pd.DataFrame(index=spread.index)
+    signals = pd.DataFrame(index = spread.index)
     signals['longs'] = longs
     signals['shorts'] = shorts
     signals['exits'] = exits
