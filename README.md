@@ -1,5 +1,5 @@
-## Comparative Analysis of FX Hedging Models
-This repository contains implementations of various hedging models in Python. The models included are:
+## Pairs Trading Model Implementation and Backtesting
+This repository offers a detailed implementation of a pairs trading strategy using Python. The project includes various functions and methodologies to identify, analyze, and backtest cointegrated pairs within a dataset of commodities. The models included are:
 
 1. **Pairs Trading Strategy**
    - `PairsTradingMain.ipynb`: Contains the implementation of the built Pairs Trading Strategy.
@@ -12,7 +12,7 @@ This repository contains implementations of various hedging models in Python. Th
 
     The project then calculates the Z-score of the spread, which standardizes the spread and helps identify potential trading opportunities. The Z-score measures how far the spread is from its mean in terms of standard deviations. Trading signals are generated based on predefined Z-score thresholds, which trigger long or short positions. This systematic approach ensures that trades are made based on quantifiable criteria rather than subjective judgment. <br/>
 
-    inally, the strategy is rigorously backtested to evaluate its performance over historical data. This backtesting process simulates the strategy in a controlled environment, allowing for an assessment of its potential profitability. The results of the backtesting are visualized, providing a clear view of the strategy's performance over time and helping to identify trends or areas that may require further refinement. The project provides a robust framework for deploying a systematic pairs trading strategy in the commodities markets, grounded in statistical rigor and data-driven decision-making.
+    Initially, the strategy is rigorously backtested to evaluate its performance over historical data. This backtesting process simulates the strategy in a controlled environment, allowing for an assessment of its potential profitability. The results of the backtesting are visualized, providing a clear view of the strategy's performance over time and helping to identify trends or areas that may require further refinement. The project provides a robust framework for deploying a systematic pairs trading strategy in the commodities markets, grounded in statistical rigor and data-driven decision-making.
 
    - `GetTestPairs.ipynb`: Contains the project to get the test pairs with statistical refinement.
 
